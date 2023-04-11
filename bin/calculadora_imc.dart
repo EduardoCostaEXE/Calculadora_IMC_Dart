@@ -1,5 +1,8 @@
-import 'package:calculadora_imc/calculadora_imc.dart' as calculadora_imc;
+import 'package:calculadora_imc/classes/Usuario.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${calculadora_imc.calculate()}!');
+  print('Inicializando calculadora!'); //${calculadora.calculate()}!
+
+  Usuario pessoa = Usuario("Amália", 1.60, 55);
+  print(pessoa.calcular(pessoa.getPeso(), pessoa.getAltura()));
 }
