@@ -86,5 +86,28 @@ class Usuario {
     }
   }
 
+  String calcular() {
+    double imc = _peso / (_altura * _altura);
+    String resultado;
+
+    if (imc < 16) {
+      resultado = 'magreza grave';
+    } else if (imc < 17) {
+      resultado = 'magreza moderada';
+    } else if (imc < 18.5) {
+      resultado = 'magreza leve';
+    } else if (imc < 25) {
+      resultado = 'saudável';
+    } else if (imc < 30) {
+      resultado = 'sobrepeso';
+    } else if (imc < 35) {
+      resultado = 'obesidade grau 1';
+    } else if (imc < 40) {
+      resultado = 'obesidade grau 2(severa)';
+    } else {
+      resultado = 'obesidade grau 3(mórbida)';
+    }
+
+    return 'Valor do cáulculo: $imc, resultado: $resultado';
   }
 }
